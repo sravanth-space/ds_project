@@ -171,3 +171,12 @@ cython_debug/
 .pypirc
 
 qpo_dataset/
+
+
+gan_checkpoints/
+
+data/
+
+enhanced_qpo_dataset/
+
+qpo_experiments/
