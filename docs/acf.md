@@ -46,6 +46,21 @@ In your earlier ACF plots:
 - **No-QPO samples** had mostly random fluctuations around zero (no repeating structure)
 
 ---
+### 🧪 How Does it Work?
+The ACF at lag \( k \) is given by:
+
+\[
+\rho_k = \frac{\text{Cov}(X_t, X_{t-k})}{\text{Var}(X_t)}
+\]
+
+Where:
+- \( X_t \): Time series at time \( t \)
+- \( X_{t-k} \): Time series lagged by \( k \) periods
+- \( \rho_k \): Autocorrelation at lag \( k \)
+
+---
+
+
 
 ## ✅ Summary:
 
