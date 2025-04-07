@@ -191,7 +191,7 @@ gan_outputs/
 
 .DS_Store
 
-xmm_data_0864960101/
+xmm_data/
 
 0864960101.tar
 
@@ -199,3 +199,5 @@ qpo_physical_dataset/
 
 xmm_qpo_psd_obs.npy
 sbi_qpo_inference_results.csv
+
+bin/
