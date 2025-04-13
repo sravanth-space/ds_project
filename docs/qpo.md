@@ -1,6 +1,6 @@
 ## 🌌 What is a **QPO**?
 
-### ✅ **QPO = Quasi-Periodic Oscillation**
+###  **QPO = Quasi-Periodic Oscillation**
 
 A **QPO** is a repeating variation in the brightness of an astronomical object (like a black hole or neutron star), but **not perfectly periodic** like a sine wave — it's **“quasi”** periodic:
 
@@ -8,7 +8,7 @@ A **QPO** is a repeating variation in the brightness of an astronomical object (
 
 ---
 
-## 🧠 Where Do QPOs Occur?
+## Where Do QPOs Occur?
 
 Mainly seen in:
 - **X-ray binaries**
@@ -20,7 +20,7 @@ They show up in **X-ray light curves** — brightness measured over time — as 
 
 ---
 
-## 🎯 Why Are QPOs Important?
+##  Why Are QPOs Important?
 
 They give clues about **what’s happening near the event horizon** of a black hole or surface of a neutron star. They help probe:
 - **Mass and spin** of the black hole
@@ -57,7 +57,7 @@ Imagine a bell that doesn't ring exactly the same way every time:
 - **A beating drum with slight random hits = quasi-periodic**
 
 
-## 🚀 Why Detect QPOs? — **Key Scientific Uses**
+##  Why Detect QPOs? — **Key Scientific Uses**
 
 ---
 
@@ -72,7 +72,7 @@ Especially **high-frequency QPOs (HFQPOs)** are linked to matter orbiting very c
 
 ---
 
-### 2. 🧠 **Probing Strong Gravity & General Relativity**
+### 2. **Probing Strong Gravity & General Relativity**
 
 QPOs originate from regions where **general relativity dominates**. They help test:
 - **Frame dragging (Lense–Thirring precession)**

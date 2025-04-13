@@ -3,7 +3,7 @@
 
 ---
 
-## 🔍 Function Purpose
+##  Function Purpose
 
 ```python
 simulate_black_hole_lightcurve(...)
@@ -26,7 +26,7 @@ Simulates a light curve with both random variability and a quasi-periodic oscill
 
 ---
 
-## 🧠 What’s Happening Line-by-Line
+## What’s Happening Line-by-Line
 
 ### 1. **Time Array**
 ```python

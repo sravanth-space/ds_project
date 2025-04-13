@@ -2,7 +2,7 @@ You're asking *exactly* the right questions at *exactly* the right time — and 
 
 ---
 
-## 🔍 Let's Start With: What Is a GAN?
+##  Let's Start With: What Is a GAN?
 
 ### 🎭 A GAN = Generative Adversarial Network
 
@@ -17,7 +17,7 @@ They compete, improve each other, and eventually the generator gets *really good
 
 ---
 
-## 🎯 Your Goal: Generate **Synthetic QPO Light Curves**
+##  Your Goal: Generate **Synthetic QPO Light Curves**
 
 You want to:
 - Train a model that can generate **light curves with QPOs**
@@ -44,13 +44,13 @@ Each sample is:
 ## 💭 Your Big Question:
 > “We have non-QPO and QPO samples. Why not **use that explicitly** instead of ignoring the labels in an unconditional GAN?”
 
-### ✅ You're right to ask this!
+###  You're right to ask this!
 
 So let’s brainstorm every *smart* way we could use your labeled dataset to train a GAN.
 
 ---
 
-## 🧠 Brainstorm: Ways to Use Your Labeled Dataset in GANs
+## Brainstorm: Ways to Use Your Labeled Dataset in GANs
 
 | Idea | Description | Example Use | Pros | Cons |
 |------|-------------|-------------|------|------|
@@ -62,7 +62,7 @@ So let’s brainstorm every *smart* way we could use your labeled dataset to tra
 
 ---
 
-## ✅ What You Were Doing Previously (Unconditional GAN)
+##  What You Were Doing Previously (Unconditional GAN)
 
 You were feeding:
 - A **latent vector** `z` (random noise)
@@ -78,7 +78,7 @@ That’s fine for learning the *general distribution*, but it doesn’t give you
 
 ---
 
-## ✅ What You're Doing Now (Noise → QPO GAN)
+##  What You're Doing Now (Noise → QPO GAN)
 
 You're doing something smarter:
 - Use **non-QPO light curves as inputs**
@@ -91,21 +91,21 @@ This is very **physics-inspired**, and arguably **the best approach** to train a
 
 ---
 
-## 🧠 Summary of GAN Training Strategies You Could Try
+## Summary of GAN Training Strategies You Could Try
 
 | Method              | Generator Input       | Generator Output          | Uses labels? | Use Case |
 |---------------------|-----------------------|----------------------------|--------------|----------|
-| Unconditional GAN   | Random `z`            | Light curve                | ❌ No         | General light curve generation |
-| Conditional GAN     | `z + label`           | QPO or non-QPO curve       | ✅ Yes        | Controlled generation |
-| Noise→QPO GAN       | Non-QPO curve         | QPO-added curve            | ✅ Yes (indirect) | QPO injection |
-| Classifier GAN      | Random `z`            | Light curve + label        | ✅ Yes        | Joint generation + classification |
-| VAE-GAN             | QPO or non-QPO        | Learn latent space of types| ✅ Yes        | Interpolation between types |
+| Unconditional GAN   | Random `z`            | Light curve                | No         | General light curve generation |
+| Conditional GAN     | `z + label`           | QPO or non-QPO curve       |  Yes        | Controlled generation |
+| Noise→QPO GAN       | Non-QPO curve         | QPO-added curve            |  Yes (indirect) | QPO injection |
+| Classifier GAN      | Random `z`            | Light curve + label        |  Yes        | Joint generation + classification |
+| VAE-GAN             | QPO or non-QPO        | Learn latent space of types|  Yes        | Interpolation between types |
 
 ---
 
-## ✅ Final Thoughts
+##  Final Thoughts
 
-🎯 You're now doing something scientifically meaningful:
+ You're now doing something scientifically meaningful:
 - Using real structure in your data (noise vs QPO)
 - Training your generator with purpose: **learn how QPOs are embedded**
 

@@ -1,6 +1,6 @@
 A **GAN**, or **Generative Adversarial Network**, is a type of machine learning framework developed by **Ian Goodfellow** and his colleagues in 2014. It’s used primarily for **generating new data that is similar to a given dataset**, such as creating realistic images, music, or even text.
 
-### 🧠 **Core Idea**
+### **Core Idea**
 A GAN consists of **two neural networks** that are trained together in a kind of **game**:
 
 1. **Generator (G)** – This network tries to create fake data that looks real.
@@ -20,7 +20,7 @@ Imagine a **counterfeit artist** (Generator) trying to make fake paintings, and 
 
 ---
 
-### 🔍 Applications of GANs:
+###  Applications of GANs:
 - **Image generation**: Faces, artworks, scenes (e.g., [ThisPersonDoesNotExist.com](https://thispersondoesnotexist.com))
 - **Image-to-image translation**: Converting sketches to photos, night to day
 - **Super-resolution**: Enhancing image quality

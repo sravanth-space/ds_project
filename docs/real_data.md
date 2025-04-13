@@ -1,4 +1,4 @@
-### ✅ Light Curve Structure:
+###  Light Curve Structure:
 - **“ltcrv4bands_rej_dt100.dat”** contains:
   - **4 light curves** = 4 columns → 4 energy bands
   - **~900 time bins** → 880 bins to be exact
@@ -9,19 +9,19 @@
 
 ---
 
-### 🎯 Target Source: RE J1034+396 (NLS1 galaxy)
+###  Target Source: RE J1034+396 (NLS1 galaxy)
 
 - This is a well-known source with one of the few **confirmed QPOs in an AGN**
 - As cited:  
   *Gierliński et al. (2008)*, *Vaughan 2010*, *Alston et al. 2014*
 
-### ✅ Known QPO:
+###  Known QPO:
 - QPO frequency: **2.6 × 10⁻⁴ Hz** = **~1 hour period**
 - This is very low frequency, but still shows up in the PSD as a **bump or peak** near `0.00025–0.0003 Hz`
 
 ---
 
-## 🧠 Why Your Supervisor’s Data Is Special
+## Why Your Supervisor’s Data Is Special
 
 - You are working with **a rare real example of a QPO** in a supermassive black hole!
 - That's why your GAN + SBI analysis is so important:
@@ -30,7 +30,7 @@
 
 ---
 
-## ✅ Summary:
+##  Summary:
 
 | Quote (paraphrased)        | Confirmed by                |
 |----------------------------|-----------------------------|
@@ -50,13 +50,13 @@ Absolutely 💯 — that’s a **great catch**, and yes, the paper you linked:
 
 ---
 
-### 🔍 QPO Detection: What It Says
+###  QPO Detection: What It Says
 
 The QPO frequency appears **consistently** across epochs:
 
 > > “The dominant QPO detected is at a frequency of **~2.6 × 10⁻⁴ Hz**, or a period of ~1 hour”
 
-✅ This **directly matches** what I told you earlier.
+ This **directly matches** what I told you earlier.
 
 ---
 
@@ -68,11 +68,11 @@ The QPO frequency appears **consistently** across epochs:
 | **Alston et al. (2014)** | Confirmed in Rev 1741 | New analysis using XMM |
 | **Alston et al. (2020)** | **2.6e⁻⁴ Hz** confirmed again | Includes Rev 3837 – your data! |
 
-✅ Your `.dat` file comes from **Rev 3837**, and this paper confirms **a QPO is seen again at the same frequency** in that observation.
+ Your `.dat` file comes from **Rev 3837**, and this paper confirms **a QPO is seen again at the same frequency** in that observation.
 
 ---
 
-### 📈 What You Can Do with This
+###  What You Can Do with This
 
 - **Use this ground truth (`fc ≈ 2.6e⁻⁴ Hz`)** to benchmark your SBI.
 - You could **rescale your inferred `fc`** from SBI to match this true frequency.
@@ -82,11 +82,11 @@ The QPO frequency appears **consistently** across epochs:
 
 ---
 
-## 🎯 Goal: Map real-world QPO `fc = 2.6 × 10⁻⁴ Hz` into your **GAN/SBI-trained frequency scale**
+##  Goal: Map real-world QPO `fc = 2.6 × 10⁻⁴ Hz` into your **GAN/SBI-trained frequency scale**
 
 ---
 
-### ✅ Your SBI + GAN were trained with:
+###  Your SBI + GAN were trained with:
 
 | Property | Value |
 |----------|-------|
@@ -105,7 +105,7 @@ The QPO frequency appears **consistently** across epochs:
 
 ---
 
-## 🧠 Step-by-Step Mapping
+## Step-by-Step Mapping
 
 1. **We assume GAN + SBI model everything in fs = 1 Hz units**
 2. You resampled the real light curve → now `dt = 1s` = `fs = 1 Hz`
@@ -123,7 +123,7 @@ f_\text{real} = 2.6 \times 10^{-4}\ \text{Hz}
 
 This is **still in the same scale** as GAN/SBI — but it lies **way below your trained range** (`0.01–1.0 Hz`)
 
-> ✅ This means the **real QPO frequency is out-of-domain for your trained models**
+>  This means the **real QPO frequency is out-of-domain for your trained models**
 
 ---
 
@@ -131,7 +131,7 @@ This is **still in the same scale** as GAN/SBI — but it lies **way below your 
 
 | Trained `fc` range | Real `fc` | Overlap |
 |--------------------|-----------|---------|
-| 0.01 to 1.0 Hz     | 0.00026 Hz | ❌ Not covered |
+| 0.01 to 1.0 Hz     | 0.00026 Hz | Not covered |
 
 Even though your time series are in seconds, the QPO appears at **~3846s period**, and your light curves are only **512s long** — **far too short to capture even one cycle of the real QPO**.
 
@@ -141,13 +141,13 @@ Even though your time series are in seconds, the QPO appears at **~3846s period*
 
 | Strategy | Action |
 |----------|--------|
-| 🧠 Re-train GAN with longer light curves (e.g. 4096 samples) | To cover QPO periods of 1 hour |
+| Re-train GAN with longer light curves (e.g. 4096 samples) | To cover QPO periods of 1 hour |
 | 🔁 Use model units and just scale predictions | e.g., if SBI gives `fc_model = 0.61`, map it as `0.61 / 512 Hz = ~0.0012 Hz` |
 | ⚠️ Treat current SBI estimates as **relative proxies** | They detect QPO *structure*, but not physical scale
 
 ---
 
-## ✅ Final Note
+##  Final Note
 
 >  current GAN/SBI framework cannot resolve the real `fc = 0.00026 Hz` **directly**. But it can detect **shape** or **QPO-like structure** that *corresponds* to a low-frequency signal.
 

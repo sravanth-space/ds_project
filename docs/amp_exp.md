@@ -36,7 +36,7 @@ To investigate how the **strength of QPO signals (amplitude)** affects the class
 
 ---
 
-### 📈 Trend & Interpretation:
+###  Trend & Interpretation:
 
 1. **Low Amplitude (0.1–0.3)**:
    - The model performs near random (~50–69%)
@@ -55,7 +55,7 @@ To investigate how the **strength of QPO signals (amplitude)** affects the class
 
 ---
 
-### 🧠 Insights:
+### Insights:
 
 - The LSTM is **highly sensitive to QPO amplitude** and can detect periodicity reliably once the signal reaches ~0.4–0.5 strength.
 - Your experiment shows a clear **detection threshold region** where performance jumps.

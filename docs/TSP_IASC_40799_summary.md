@@ -84,7 +84,7 @@ This paper demonstrates an innovative approach to astronomical signal detection 
 
 ---
 
-### 🧠 Why This Matters
+### Why This Matters
 This approach allowed them to:
 - Control the **presence and absence of QPOs** precisely.
 - Generate **large labeled datasets**, which is essential for training deep learning models like CNNs.

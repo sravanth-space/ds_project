@@ -7653,7 +7653,7 @@ a.anchor-link {
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">amplitudes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">amp</span> <span class="ow">in</span> <span class="n">amplitudes</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">🚀 Generating Data on amplitude: </span><span class="si">{</span><span class="n">amp</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Generating Data on amplitude: </span><span class="si">{</span><span class="n">amp</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="n">folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"qpo_experiments/dataset_amp_</span><span class="si">{</span><span class="n">amp</span><span class="si">}</span><span class="s2">"</span>
     <span class="n">generate_dataset_for_amplitude</span><span class="p">(</span><span class="n">amp</span><span class="p">,</span> <span class="n">folder</span><span class="p">)</span>
 </pre></div>
@@ -7669,25 +7669,25 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
-🚀 Generating Data on amplitude: 0.1
+ Generating Data on amplitude: 0.1
 
-🚀 Generating Data on amplitude: 0.2
+ Generating Data on amplitude: 0.2
 
-🚀 Generating Data on amplitude: 0.3
+ Generating Data on amplitude: 0.3
 
-🚀 Generating Data on amplitude: 0.4
+ Generating Data on amplitude: 0.4
 
-🚀 Generating Data on amplitude: 0.5
+ Generating Data on amplitude: 0.5
 
-🚀 Generating Data on amplitude: 0.6
+ Generating Data on amplitude: 0.6
 
-🚀 Generating Data on amplitude: 0.7
+ Generating Data on amplitude: 0.7
 
-🚀 Generating Data on amplitude: 0.8
+ Generating Data on amplitude: 0.8
 
-🚀 Generating Data on amplitude: 0.9
+ Generating Data on amplitude: 0.9
 
-🚀 Generating Data on amplitude: 1.0
+ Generating Data on amplitude: 1.0
 </pre>
 </div>
 </div>
@@ -7837,7 +7837,7 @@ a.anchor-link {
 <span class="n">amplitudes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span><span class="mf">0.9</span><span class="p">,</span><span class="mf">1.0</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">amp</span> <span class="ow">in</span> <span class="n">amplitudes</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">🚀 Training on amplitude: </span><span class="si">{</span><span class="n">amp</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2"> Training on amplitude: </span><span class="si">{</span><span class="n">amp</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="n">folder</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"qpo_experiments/dataset_amp_</span><span class="si">{</span><span class="n">amp</span><span class="si">}</span><span class="s2">"</span>
 
     <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="s1">'data.npz'</span><span class="p">))</span>
@@ -7869,7 +7869,7 @@ a.anchor-link {
 
     <span class="n">best_val_acc</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'val_accuracy'</span><span class="p">])</span>
     <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">amp</span><span class="p">,</span> <span class="n">best_val_acc</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"✅ Amplitude </span><span class="si">{</span><span class="n">amp</span><span class="si">}</span><span class="s2">: Best Val Accuracy = </span><span class="si">{</span><span class="n">best_val_acc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">" Amplitude </span><span class="si">{</span><span class="n">amp</span><span class="si">}</span><span class="s2">: Best Val Accuracy = </span><span class="si">{</span><span class="n">best_val_acc</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="c1"># Save results</span>
 <span class="n">df_results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Amplitude'</span><span class="p">,</span> <span class="s1">'Val_Accuracy'</span><span class="p">])</span>
@@ -7898,7 +7898,7 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
-🚀 Training on amplitude: 0.1
+ Training on amplitude: 0.1
 Epoch 1/50
 63/63 - 19s - 307ms/step - accuracy: 0.4995 - loss: 0.7302 - val_accuracy: 0.5005 - val_loss: 0.6931 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8007,9 +8007,9 @@ Restoring model weights from the end of the best epoch: 27.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.1: Best Val Accuracy = 0.5680
+<pre> Amplitude 0.1: Best Val Accuracy = 0.5680
 
-🚀 Training on amplitude: 0.2
+ Training on amplitude: 0.2
 Epoch 1/50
 63/63 - 16s - 261ms/step - accuracy: 0.5167 - loss: 0.7107 - val_accuracy: 0.5585 - val_loss: 0.6923 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8104,9 +8104,9 @@ Restoring model weights from the end of the best epoch: 20.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.2: Best Val Accuracy = 0.6360
+<pre> Amplitude 0.2: Best Val Accuracy = 0.6360
 
-🚀 Training on amplitude: 0.3
+ Training on amplitude: 0.3
 Epoch 1/50
 63/63 - 16s - 247ms/step - accuracy: 0.5490 - loss: 0.7087 - val_accuracy: 0.5595 - val_loss: 0.6906 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8237,9 +8237,9 @@ Restoring model weights from the end of the best epoch: 34.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.3: Best Val Accuracy = 0.6905
+<pre> Amplitude 0.3: Best Val Accuracy = 0.6905
 
-🚀 Training on amplitude: 0.4
+ Training on amplitude: 0.4
 Epoch 1/50
 63/63 - 17s - 267ms/step - accuracy: 0.5441 - loss: 0.7004 - val_accuracy: 0.5390 - val_loss: 0.6880 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8332,9 +8332,9 @@ Restoring model weights from the end of the best epoch: 19.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.4: Best Val Accuracy = 0.8795
+<pre> Amplitude 0.4: Best Val Accuracy = 0.8795
 
-🚀 Training on amplitude: 0.5
+ Training on amplitude: 0.5
 Epoch 1/50
 63/63 - 16s - 255ms/step - accuracy: 0.5889 - loss: 0.6783 - val_accuracy: 0.6285 - val_loss: 0.6834 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8399,9 +8399,9 @@ Restoring model weights from the end of the best epoch: 7.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.5: Best Val Accuracy = 0.7745
+<pre> Amplitude 0.5: Best Val Accuracy = 0.7745
 
-🚀 Training on amplitude: 0.6
+ Training on amplitude: 0.6
 Epoch 1/50
 63/63 - 16s - 247ms/step - accuracy: 0.6314 - loss: 0.6483 - val_accuracy: 0.6505 - val_loss: 0.6690 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8502,9 +8502,9 @@ Restoring model weights from the end of the best epoch: 22.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.6: Best Val Accuracy = 0.9905
+<pre> Amplitude 0.6: Best Val Accuracy = 0.9905
 
-🚀 Training on amplitude: 0.7
+ Training on amplitude: 0.7
 Epoch 1/50
 63/63 - 16s - 260ms/step - accuracy: 0.6181 - loss: 0.6505 - val_accuracy: 0.7095 - val_loss: 0.6738 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8597,9 +8597,9 @@ Restoring model weights from the end of the best epoch: 18.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.7: Best Val Accuracy = 0.9885
+<pre> Amplitude 0.7: Best Val Accuracy = 0.9885
 
-🚀 Training on amplitude: 0.8
+ Training on amplitude: 0.8
 Epoch 1/50
 63/63 - 16s - 255ms/step - accuracy: 0.6417 - loss: 0.6299 - val_accuracy: 0.7015 - val_loss: 0.6688 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8680,9 +8680,9 @@ Restoring model weights from the end of the best epoch: 13.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.8: Best Val Accuracy = 0.9985
+<pre> Amplitude 0.8: Best Val Accuracy = 0.9985
 
-🚀 Training on amplitude: 0.9
+ Training on amplitude: 0.9
 Epoch 1/50
 63/63 - 17s - 271ms/step - accuracy: 0.6467 - loss: 0.6281 - val_accuracy: 0.7250 - val_loss: 0.6605 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8737,9 +8737,9 @@ Restoring model weights from the end of the best epoch: 2.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 0.9: Best Val Accuracy = 0.8545
+<pre> Amplitude 0.9: Best Val Accuracy = 0.8545
 
-🚀 Training on amplitude: 1.0
+ Training on amplitude: 1.0
 Epoch 1/50
 63/63 - 16s - 247ms/step - accuracy: 0.6913 - loss: 0.5854 - val_accuracy: 0.5220 - val_loss: 0.6691 - learning_rate: 5.0000e-04
 Epoch 2/50
@@ -8848,7 +8848,7 @@ Restoring model weights from the end of the best epoch: 24.
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>✅ Amplitude 1.0: Best Val Accuracy = 0.9990
+<pre> Amplitude 1.0: Best Val Accuracy = 0.9990
 </pre>
 </div>
 </div>

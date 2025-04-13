@@ -2,7 +2,7 @@ Certainly! Here's the same explanation formatted as **concise technical document
 
 ---
 
-## 🧠 **SBI Inference Method Notes (SNPE-based)**
+## **SBI Inference Method Notes (SNPE-based)**
 
 ### Overview:
 This project uses **Simulation-Based Inference (SBI)** with the `sbi` Python library.  
@@ -12,7 +12,7 @@ Specifically, we implement:
 
 ---
 
-### ✅ Method Summary:
+###  Method Summary:
 
 | Component                     | Description |
 |------------------------------|-------------|
@@ -43,7 +43,7 @@ posterior.sample((500,), x=x_obs)
 
 ---
 
-### ❌ Not Using:
+### Not Using:
 
 - Markov Chain Monte Carlo (MCMC)
 - Approximate Bayesian Computation (ABC)
@@ -51,7 +51,7 @@ posterior.sample((500,), x=x_obs)
 
 ---
 
-### ✅ Advantages of SNPE:
+###  Advantages of SNPE:
 
 - Efficient inference on **high-dimensional simulators**
 - Learns a flexible **parametric posterior** over `θ`
@@ -60,7 +60,7 @@ posterior.sample((500,), x=x_obs)
 
 ---
 
-### 🧠 Behind the Scenes (by default):
+### Behind the Scenes (by default):
 
 - Learns `p(θ | x)` using:
   - MAF (Masked Autoregressive Flow)

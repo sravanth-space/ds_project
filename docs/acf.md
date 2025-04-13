@@ -13,7 +13,7 @@ The **Autocorrelation Function (ACF)** tells you **how similar a signal is to a 
 
 ---
 
-### 🧠 Interpretation of Lags in ACF:
+### Interpretation of Lags in ACF:
 
 | Lag | What It Means                              | ACF Value |
 |-----|---------------------------------------------|-----------|
@@ -39,7 +39,7 @@ This means the signal **repeats** roughly every 5 time steps (at fs = 1 Hz), rev
 
 ---
 
-### 🔍 Visual Insight from Your Plot:
+###  Visual Insight from Your Plot:
 
 In your earlier ACF plots:
 - **QPO samples** showed **clean, repeating oscillations** in ACF
@@ -62,7 +62,7 @@ Where:
 
 
 
-## ✅ Summary:
+##  Summary:
 
 - **Lag** = how far back you shift the time series.
 - **ACF(lag)** = correlation between `x[t]` and `x[t - lag]`

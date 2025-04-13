@@ -1,5 +1,5 @@
 
-# 🧠 1. SBI Posterior Inference – `posterior.sample(...)`
+# 1. SBI Posterior Inference – `posterior.sample(...)`
 
 ### 🔧 What it does:
 Infers the **posterior distribution** of the physical parameters:
@@ -42,7 +42,7 @@ These are **500 inferred values** of:
 
 ---
 
-# 🔍 2. Lorentzian Fit – `compute_lorentzian_q()`
+#  2. Lorentzian Fit – `compute_lorentzian_q()`
 
 ### 🔧 What it does:
 Fits a **Lorentzian curve** to the PSD peak to measure how sharp and centered the QPO is — this gives the **Q-factor**:
@@ -97,7 +97,7 @@ has_qpo = score > 1.4
 
 ---
 
-### 🧠 Logic Behind This Formula:
+### Logic Behind This Formula:
 - `Q / 3`: Normalize Q to scale ~1
 - `+ amp_mean`: Boost if amplitude is high
 - `- fc_std`: Penalize if frequency estimation is uncertain
@@ -155,7 +155,7 @@ show_plot    # whether to display PSD
 
 ---
 
-## 🔍 Why Not Just Threshold on Q or amp?
+##  Why Not Just Threshold on Q or amp?
 
 Because:
 - Q alone fails when the fit breaks (Band 4)
@@ -172,13 +172,13 @@ So a **score-based soft rule** works better.
 Q = 5.52
 amp_mean = 0.560
 fc_std = 0.251
-→ score = 5.52/3 + 0.560 - 0.251 = 2.15 ✅
+→ score = 5.52/3 + 0.560 - 0.251 = 2.15 
 ```
 
 Detected confidently as QPO!
 
 ---
 
-## 🧠 Summary (for Viva)
+## Summary (for Viva)
 
 > “We detect QPOs by computing a power spectral density (PSD) of each light curve and using simulation-based inference (SBI) to estimate the underlying physical parameters (frequency and amplitude). We also fit a Lorentzian to the PSD peak to compute the Q-factor. These features are combined into a score function that captures oscillation strength, frequency sharpness, and model uncertainty. A threshold on this score determines whether a QPO is present.”

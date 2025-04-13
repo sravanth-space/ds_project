@@ -1,10 +1,10 @@
-✅ Yes — **a higher Q means a stronger and cleaner QPO.**
+ Yes — **a higher Q means a stronger and cleaner QPO.**
 
 Let’s break that down clearly, so you can **explain and defend it** in your project or report.
 
 ---
 
-## 🧠 What Is Q (Quality Factor) in QPOs?
+## What Is Q (Quality Factor) in QPOs?
 
 In the context of **quasi-periodic oscillations (QPOs)** in astrophysical light curves, the **Q factor** is defined as:
 
@@ -18,7 +18,7 @@ Where:
 
 ---
 
-## 📈 What Does Q Tell Us?
+##  What Does Q Tell Us?
 
 | Q Value | Interpretation                     | Meaning                                     |
 |---------|-------------------------------------|---------------------------------------------|
@@ -27,11 +27,11 @@ Where:
 | >5      | Strong, narrow QPO                  | Highly coherent QPO (astrophysically real)  |
 | >10     | Exceptional QPO                     | Very strong candidate for resonance-based QPO |
 
-### ✅ So yes: **Higher Q = cleaner, more coherent oscillation.**
+###  So yes: **Higher Q = cleaner, more coherent oscillation.**
 
 ---
 
-## 🔍 Real Example: REJ1034+396
+##  Real Example: REJ1034+396
 
 From Middleton et al. (2011, 2020):
 
@@ -55,13 +55,13 @@ Q is used to:
 
 ---
 
-## ✅ Your Usage (SBI + Lorentzian + GAN)
+##  Your Usage (SBI + Lorentzian + GAN)
 
 In your project:
 - You compute Q via Lorentzian fit
 - You combine Q with SBI-inferred `fc_std` and `amp_mean`
 - You use Q as:
-  - 🔍 A feature in your classifier
+  -  A feature in your classifier
   - 🔒 A scientific constraint for detection
 
 ---
