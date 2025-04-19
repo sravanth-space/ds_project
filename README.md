@@ -1,16 +1,71 @@
-# ds_project
+# QPO Detection and Generation Project
 
+## Overview
+A neural network based approach to detecting quasi-periodic oscillations from black holes
 
-Detection of Quasi-Periodic Oscillations (QPOs) in Neutron Star Light Curves Using Neural Networks
+## Project Structure
+### Main Notebooks
+- `qpo_detector.ipynb`: Main notebook for QPO detection algorithms
+- `cgan_phy.ipynb`: Conditional GAN implementation for physical data
+- `cgan_phy_generated_dataset.ipynb`: Generation of datasets using CGAN
+- `cgan_best.ipynb`: Best performing CGAN implementation
+- `sbi.ipynb`: Simulation-Based Inference implementation
+- `amp_experiment.ipynb`: Amplitude experiment analysis
+- `param.ipynb`: Parameter analysis and optimization
+- `plot_hyperparam_runs.ipynb`: Visualization of hyperparameter optimization results
+- `diagrams.ipynb`: Project diagrams and visualizations
+- `dataset_generator_am_signal.ipynb`: AM signal dataset generation
+- `real_data_from_supervisor.ipynb`: Processing of real astronomical data
+- `gan.ipynb`: Base GAN implementation
+- `conditional_gan_exp.ipynb`: Conditional GAN experiments
 
+### Directories
+- `gan_outputs/`: Directory containing generated samples and model outputs
+- `qpo_physical_dataset/`: Physical dataset for training and testing
+- `utils/`: Utility functions and helper modules
+- `saved_models/`: Trained model checkpoints
+- `papers/`: Related research papers and documentation
+- `backups/`: Backup files
+- `bin/`: Binary files and executables
+- `archive-usued-utils/`: Archived utility functions
 
-# Project overview.
+### Data Files
+- `ltcrv4bands_rej_dt100.dat`: Light curve data from galaxy called REJ1034+396(XMM-Newton) Revolution 3837
+  
+## Key Features
+- Conditional GAN for synthetic data generation
+- Hyperparameter optimization
+- Simulation-Based Inference for parameter estimation
+- QPO Detection
 
-- Detecting periodic signals in stochastic random walk data from black holes
-- Build a GAN to simulate time series like those seen from accreting black holes
-- Will be based on and architecture of e.g. RNN vs LSTM, or LSTM vs GRU
-- Trained on properties of real data (power spectrum / ACF)
-- Data from X-ray telescope called XMM-Newton will be supplied from supervisor
-- Once GAN is trained we will test output to see if it has properties of real data – power spectrum, log-normal distribution
-- If GAN is producing realistic data we can then test this on real data
-- Simulation based inference on known periodic detection on power spectrum supplied by supervisor
+## Installation
+1. Clone the repository
+2. Create a virtual environment:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+The project is organized as Jupyter notebooks:
+1. Start with `qpo_detector.ipynb` for QPO detection
+2. Use `cgan_phy.ipynb` for generating synthetic data
+3. Explore `sbi.ipynb` for parameter inference
+4. Use `plot_hyperparam_runs.ipynb` for analyzing optimization results
+5. Check `diagrams.ipynb` for project visualizations
+
+## Data
+- The project uses astronomical time series data
+- Physical dataset is stored in `qpo_physical_dataset/`
+- Generated samples are saved in `gan_outputs/`
+- Real data processing is documented in `real_data_from_supervisor.ipynb`
+
+## License
+See the LICENSE file for details.
+
+## Contact
+[Your contact information here]
