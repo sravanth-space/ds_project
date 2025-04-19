@@ -5,28 +5,27 @@ A neural network based approach to detecting quasi-periodic oscillations from bl
 
 ## Project Structure
 ### Main Notebooks
-- `qpo_detector.ipynb`: Main notebook for QPO detection algorithms
+- `dataset_generator_am_signal.ipynb`: AM signal dataset generation
+- `amp_experiment.ipynb`: Amplitude experiment analysis
+- `gan.ipynb`: Base GAN implementation experiments
+- `conditional_gan_exp.ipynb`: Conditional GAN experiments
 - `cgan_phy.ipynb`: Conditional GAN implementation for physical data
 - `cgan_phy_generated_dataset.ipynb`: Generation of datasets using CGAN
+- `diagrams.ipynb`: Project diagrams and visualizations
 - `cgan_best.ipynb`: Best performing CGAN implementation
-- `sbi.ipynb`: Simulation-Based Inference implementation
-- `amp_experiment.ipynb`: Amplitude experiment analysis
 - `param.ipynb`: Parameter analysis and optimization
 - `plot_hyperparam_runs.ipynb`: Visualization of hyperparameter optimization results
-- `diagrams.ipynb`: Project diagrams and visualizations
-- `dataset_generator_am_signal.ipynb`: AM signal dataset generation
+- `sbi.ipynb`: Simulation-Based Inference implementation
 - `real_data_from_supervisor.ipynb`: Processing of real astronomical data
-- `gan.ipynb`: Base GAN implementation
-- `conditional_gan_exp.ipynb`: Conditional GAN experiments
+- `qpo_detector.ipynb`: Main notebook for QPO detection algorithms
 
 ### Directories
-- `gan_outputs/`: Directory containing generated samples and model outputs
 - `qpo_physical_dataset/`: Physical dataset for training and testing
-- `utils/`: Utility functions and helper modules
+- `gan_outputs/`: Directory containing generated samples and model outputs
 - `saved_models/`: Trained model checkpoints
-- `papers/`: Related research papers and documentation
+- `utils/`: Utility functions and helper modules
+- `papers/`: Related research papers
 - `backups/`: Backup files
-- `bin/`: Binary files and executables
 - `archive-usued-utils/`: Archived utility functions
 
 ### Data Files
@@ -51,21 +50,49 @@ A neural network based approach to detecting quasi-periodic oscillations from bl
    ```
 
 ## Usage
-The project is organized as Jupyter notebooks:
-1. Start with `qpo_detector.ipynb` for QPO detection
-2. Use `cgan_phy.ipynb` for generating synthetic data
-3. Explore `sbi.ipynb` for parameter inference
-4. Use `plot_hyperparam_runs.ipynb` for analyzing optimization results
-5. Check `diagrams.ipynb` for project visualizations
+The project workflow is organized in Jupyter notebooks following this sequence:
+
+1. GAN Training and Data Generation:
+   - Start with `cgan_phy.ipynb` to train the Conditional GAN
+   - Use `cgan_phy_generated_dataset.ipynb` to generate synthetic QPO data
+   - Check `cgan_best.ipynb` for the best performing model configuration
+
+2. Simulation-Based Inference (SBI):
+   - Use `sbi.ipynb` to perform parameter inference on the generated data
+   - The posterior distributions are saved in `sbi_qpo_inference_results.csv`
+   - Analyze inference results and parameter estimations
+
+3. QPO Detection:
+   - Use `qpo_detector.ipynb` to apply the trained models for QPO detection
+   - Utilize the posterior distributions from SBI for improved detection
+   - Validate results against real astronomical data using `real_data_from_supervisor.ipynb`
+
+4. Analysis and Visualization:
+   - `plot_hyperparam_runs.ipynb` for analyzing model performance
+   - `diagrams.ipynb` for visualizing results and creating project figures
+   - `param.ipynb` for detailed parameter analysis
+
+5. Additional Experiments:
+   - `amp_experiment.ipynb` for amplitude-related studies
+   - `dataset_generator_am_signal.ipynb` for AM signal analysis
+
 
 ## Data
-- The project uses astronomical time series data
-- Physical dataset is stored in `qpo_physical_dataset/`
-- Generated samples are saved in `gan_outputs/`
-- Real data processing is documented in `real_data_from_supervisor.ipynb`
+### Synthetic Training Data
+- `dataset_generator_am_signal.ipynb` generates synthetic AM signal data
+- This synthetic data serves as the initial training set for the GAN
+- Parameters are controlled to simulate various QPO characteristics
 
-## License
-See the LICENSE file for details.
+### GAN and SBI Pipeline
+- The trained GAN generator serves as a simulator for the SBI
+- `cgan_phy.ipynb` trains the GAN model
+- The GAN generator is then used directly in `sbi.ipynb` for training the SBI neural posterior
+- This approach allows efficient parameter inference through the SBI framework
 
-## Contact
-[Your contact information here]
+### Real Astronomical Data
+- Real QPO data is stored in `ltcrv4bands_rej_dt100.dat` 
+- `real_data_from_supervisor.ipynb` processes and analyzes real QPO data
+- Used for model validation and real-world QPO detection
+
+### Results and Analysis
+- Model checkpoints and trained weights are saved in `saved_models/`
