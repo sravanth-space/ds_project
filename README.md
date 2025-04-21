@@ -22,7 +22,8 @@
 
 ### Data Files
 - `ltcrv4bands_rej_dt100.dat`: Light curve data from galaxy called REJ1034+396(XMM-Newton) Revolution 3837
-  
+- Obs. ID 0865010101
+- https://nxsa.esac.esa.int/nxsa-web/#search
 ## Key Features
 - Conditional GAN for synthetic data generation
 - Hyperparameter optimization
