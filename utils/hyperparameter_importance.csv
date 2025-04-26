@@ -1,0 +1,4 @@
+Parameter,Score_Variance,Best_Value,Num_Values_Tested
+batch_size,31807.78238253638,128.0,2
+learning_rate,7117.194689426517,0.001,2
+z_dim,1836.7446994315296,64.0,2
