@@ -66,8 +66,7 @@ The project workflow is organized in Jupyter notebooks following this sequence:
 
 5. Additional Resources:
    - Check `experiments/` for experimental notebooks and results
-   - Use `utils/` for helper functions and modules
-   - Refer to `papers/` for related research papers
+   - Use `utils/` for helper functions
 
 ## Data
 ### Data Organization
@@ -87,6 +86,5 @@ The project data is organized in the `data/` directory:
 - This approach allows efficient parameter inference through the SBI framework
 
 ### Results and Analysis
-- Model checkpoints and trained weights are saved in `saved_models/`
-- Experiments are stored in `experiments/`
-- Inference results are saved in `sbi_qpo_inference_results.csv`
+- Final Model and trained weights are saved in `saved_models/`
+- GAN QPO results in `gan_qpo_detection_results.csv`
